@@ -31,7 +31,7 @@
 | 잘못된 날짜 입력 처리 | 형식 검사와 실제 날짜 존재 여부 검사; 오류 시 사용법 출력 후 종료 | `parse_date()` |
 | 지정된 제공자 중 LLM API 선택 | Gemini 3.8 Flash를 기본 모델로 사용하고 REST API로 추천과 리포트 생성 | `generate_text()` |
 | 1차 추천을 JSON으로 생성 | JSON 응답 모드와 스키마 설정; 필수 키·타입·빈 값 검증 | `generate_text()`, `validate_recommendation()` |
-| 도시·날씨·행사·추천 이유 포함 | `recommended_city`, `weather`, `events`, `reason` 생성; 행사 1~3개 검증, 추천 이유 2~4문장은 프롬프트에서 지시 | `RECOMMENDATION_SCHEMA`, `recommend()` |
+| 도시·날씨·행사·추천 이유 포함 | `recommended_city`, `weather`, `events`, `reason` 생성; 행사는 1개에서 3개인지 검증하고, 추천 이유는 2문장에서 4문장으로 작성하도록 프롬프트에서 지시 | `RECOMMENDATION_SCHEMA`, `recommend()` |
 | 1차 추천을 장소 검색 입력으로 연결 | 검증된 `recommended_city`로 `도시명 맛집` 검색어 구성 | `run()`, `search_restaurants()` |
 | 국내 맛집 약 5곳 검색 | 카카오 키워드 검색에 음식점 필터 `FD6`와 `size=5` 전달 | `search_restaurants()` |
 | 맛집 이름·주소·분류·URL·좌표 저장 | 과제의 필드로 정규화; 도로명 주소 우선 사용, 제공된 좌표는 숫자로 변환 | `search_restaurants()` |
