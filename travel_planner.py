@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 
 
 PROJECT_DIR = Path(__file__).resolve().parent
-DEFAULT_MODEL = "gemini-3.5-flash-lite"
+DEFAULT_MODEL = "gemini-3.8-flash"
 TIMEOUT = (10, 60)  # 연결 제한 10초, 응답 대기 제한 60초
 RECOMMENDATION_SCHEMA = {
     "type": "object",
